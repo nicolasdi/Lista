@@ -8,6 +8,7 @@ import java.util.Iterator;
  * Clase que implementa la interfaz Collection.
  * Una colección cuenta con un numero definido de elementos.
  * @param <E> tipo de datos que guardará la estructura.
+ * @author nicolasdi
  */
 
 /*
@@ -16,7 +17,7 @@ import java.util.Iterator;
 * - Permite elementos repetidos
 * - Los elementos no necesariamente cumplen con un criterio de orden
 *** Detalles de la Implementación
-* - Para métodos que modifican a la colección. El tamaño de la
+* - Para métodos que modifican a la colección: el tamaño de la
 *   colección sólo es modificada por el iterador y el método add
 */
 public abstract class ColeccionAbstracta<E> implements Collection<E> {
@@ -397,7 +398,8 @@ public abstract class ColeccionAbstracta<E> implements Collection<E> {
      * no permite la operación
      * @throws ClassCastException si el tipo de e no es compatible
      * con E.
-     * @throws IllegalArgumentException
+     * @throws IllegalArgumentException si el elemento no puede ser
+     * agregado a la colección por alguna propiedad particular.
      * @throws IllegalStateException si el elemento no puede ser agregado
      * debido a alguna restricción de la implementación del
      * método en la estructura.
